@@ -1,0 +1,18 @@
+{
+    "lang": "en",
+    "sortBy": "relevancy",
+    "sources": [
+        "abc-news",
+        "associated-press",
+        "axios",
+        "bbc-news",
+        "bloomberg",
+        "cbs-news",
+        "politico",
+        "usa-today",
+        "the-hill",
+        "the-wall-street-journal",
+        "reuters",
+        "fortune"
+    ]
+}
