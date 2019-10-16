@@ -13,7 +13,7 @@ export class NewsApiRequest {
     baseApiUri: string;
     constructor(params: object, uriType: string) {
         //Adds constructor parameters to default parameters
-        this.params = Object.assign(defaultParams.defaultParams, params);
+        this.params = Object.assign({}, defaultParams.defaultParams, params);
 
         //Sets base API URI
         if(uriType === "everything") this.baseApiUri = apiUris.everything;
@@ -44,7 +44,7 @@ export class NewsApiRequest {
                     if (response.data.status === "ok") {
                         resolve(response.data);
                     } else {
-                        console.log(response.data.status);
+                        console.log("response is not ok");
                         reject(Error("API failed"))
                     }
                 })
@@ -93,7 +93,6 @@ export class NewsApiRequest {
                 }
 
             }).catch(err => {
-                console.log(err);
                 reject(Error("API failed"));
             });
         });

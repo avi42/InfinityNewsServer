@@ -14,18 +14,19 @@ const router = express.Router();
 
 router.get('/', (request, response) => {
     
-    response.set('Cache-Control', 'public, max-age=3600, s-maxage=18000');
+    // response.set('Cache-Control', 'public, max-age=3600, s-maxage=18000');
 
     collectApiResponse({}, "headlines").then(articleJson => {
         response.send(articleJson);
     }).catch(err => {
+        console.error(err);
         response.status(404).send();
     });
 });
 
 router.get('/topics', (request, response) => {
 
-    response.set('Cache-Control', 'public, max-age=3600, s-maxage=18000');
+    // response.set('Cache-Control', 'public, max-age=3600, s-maxage=18000');
 
     try {
         
@@ -39,6 +40,7 @@ router.get('/topics', (request, response) => {
         })
 
     } catch (error) {
+        console.error(error);
         response.status(404).send();
     } 
 });

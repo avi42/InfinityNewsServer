@@ -37,7 +37,6 @@ export class NewsArticle{
             imageUrl: this.getImageUrl(),
             publishedAt: this.getPublishedAt()
         };
-        console.log(articleJson);
         return articleJson;
     }
 

@@ -23,7 +23,6 @@ export function collectApiResponse(params: Object, uriType: string) {
                 else reject("Someting failed");
 
             }).catch((err: any) => {
-                console.log(err);
                 reject("Something failed");
             });
     });
