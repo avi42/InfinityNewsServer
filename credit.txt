@@ -1,0 +1,1 @@
+Credit to newsapi.org for powering this project.
